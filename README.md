@@ -1,7 +1,4 @@
-# Custom-Token-Example
-
 # Custom Token Authentication Example Easiest Way to understand
-
 # Installation steps :-
 
 1. Firstly you need to have python3 installed
