@@ -14,6 +14,6 @@ class ObtainAuthToken(APIView):
     def post(self, request):
         serializer = self.serializer_class(data=request.data)
         serializer.is_valid(raise_exception=True)
-        device = serializer.validated_data['device']
-        token, created = Token.objects.get_or_create(device=device)
+        forest = serializer.validated_data['forest']
+        token, created = Token.objects.get_or_create(forest=forest)
         return Response({'token': token.key})

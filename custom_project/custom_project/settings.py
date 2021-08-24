@@ -90,6 +90,9 @@ REST_FRAMEWORK = {
     'NON_FIELD_ERRORS_KEY': 'error',
     # 'EXCEPTION_HANDLER': 'rest_framework.views.exception_handler',
     'EXCEPTION_HANDLER': 'auth_token.utils.custom_exception_handler',
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'auth_token.authentication.UserAuthentication',
+     ),
 }
 
 # Password validation
