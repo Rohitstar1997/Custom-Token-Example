@@ -15,7 +15,7 @@ class AuthTokenSerializer(serializers.Serializer):
             forest = Forest.objects.get(name=name)
         else:
             msg = _('name is not Created')
-            raise serializers.ValidationError(msg)
+            raise serializers.ValidationError(msg, code='authorization')
 
         attrs['forest'] = forest
         return attrs
